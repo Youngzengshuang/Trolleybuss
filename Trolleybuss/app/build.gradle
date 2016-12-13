@@ -1,0 +1,45 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "23.0.3"
+
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.gjyf.trolleybus.trolleybuss"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 110
+        versionName "1.1"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+        androidTest {
+
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0-alpha2'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/httpmime-4.1.2.jar')
+    compile files('libs/fastjson.jar')
+    compile files('libs/dotellibr900senddata.jar')
+    compile files('libs/dotellibr900.jar')
+    compile project(':sliding_library')
+    compile files('libs/baidumapapi_util_v3_7_3.jar')
+    compile files('libs/rfidenderutils.jar')
+    compile files('libs/uhf.jar')
+}

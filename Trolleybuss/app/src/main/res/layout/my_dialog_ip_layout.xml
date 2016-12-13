@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="440dp"
+    android:layout_gravity="center"
+    android:background="@drawable/ld_di"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_my_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_my_dialog_et_titile"
+            android:layout_width="fill_parent"
+            android:layout_height="45.0dip"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/mainthem"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/line_gray"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom"
+                android:text="."
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom"
+                android:text="."
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="5dp"
+                android:gravity="bottom"
+                android:maxLength="3"
+                android:text="."
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:inputType="number"
+                android:maxLength="3" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_mydialog_et_positive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/select_btn_dialog_qr_cancel"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@drawable/btn_text_color"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/line_gray" />
+
+            <Button
+                android:id="@+id/btn_mydialog_et_negative"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/select_btn_dialog_qr_cancel"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@drawable/btn_text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

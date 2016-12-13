@@ -1,0 +1,600 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EBEBEB"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_top" />
+
+    <com.gjyf.trolleybus.trolleybuss.myview.ListScrollView
+        android:id="@+id/list_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="@drawable/input_2_1"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="出库单号:"
+                        android:textSize="15sp" />
+
+                    <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+                        android:id="@+id/cukudanhao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/input"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:textSize="15sp"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="出库日期:"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/stime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/input"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/cukuriqi"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/date_dl" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="出库类别:"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/cukuleibie"
+                            android:layout_width="225dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_dl_spinner"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="出料仓库:"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/cangku"
+                            android:layout_width="225dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_dl_spinner"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="申请部门:"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/input_2"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <Spinner
+                            android:id="@+id/shenqingbumen"
+                            android:layout_width="225dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_dl_spinner"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_margin="5dp"
+                    android:background="#EBEBEB" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="加工编码:"
+                        android:textSize="15sp" />
+
+                    <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+                        android:id="@+id/jiagongbianma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/input"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:paddingLeft="15dp"
+                        android:textSize="15sp"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="加工名称:"
+                        android:textSize="15sp" />
+
+                    <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+                        android:id="@+id/jiagongmingceng"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/input"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="15dp"
+                        android:textSize="15sp"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="成品数量:"
+                        android:textSize="15sp" />
+
+                    <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+                        android:id="@+id/jiagongcengpinshiliang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/input"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:paddingLeft="15dp"
+                        android:textSize="15sp"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="加工单位:"
+                        android:textSize="15sp" />
+
+                    <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+                        android:id="@+id/jiagongdanwei"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginTop="2dp"
+                        android:background="@drawable/input"
+                        android:gravity="center_vertical"
+                        android:inputType="number"
+                        android:paddingLeft="15dp"
+                        android:textSize="15sp"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="预计完成日期:"
+                        android:textSize="18sp" />
+
+
+                    <LinearLayout
+                        android:id="@+id/wancengtime"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/input"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/wancengriqi"
+                            android:layout_width="200dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginBottom="2dp"
+                            android:layout_marginTop="2dp"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="5dp"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="5dp"
+                            android:src="@drawable/date_dl" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:text="*"
+                        android:textColor="@color/red"
+                        android:textSize="15sp"
+                        android:visibility="invisible" />
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:gravity="center_vertical"
+                        android:text="  备注:"
+                        android:textSize="15sp" />
+
+                    <EditText
+                        android:id="@+id/beizhu"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="6dp"
+                        android:background="@drawable/input_2"
+                        android:gravity="top"
+                        android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="*号内容必须填写"
+                    android:textColor="@color/red"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/line_gray"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="500dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_showAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:text="------"
+                        android:visibility="gone" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@drawable/shape_cailiao_bg"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:paddingLeft="20dp"
+                            android:text="材料名称"
+                            android:textSize="16sp" />
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="25dp"
+                            android:gravity="center"
+                            android:text="    数量"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/empty"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="还没有添加材料，点击下面按钮进行添加"
+                            android:textSize="15sp" />
+
+                        <ListView
+                            android:id="@+id/cailiaolist"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@drawable/shape_cailiao_bg_w"
+                        android:orientation="vertical">
+
+                        <Button
+                            android:id="@+id/btn_show"
+                            android:layout_width="110dp"
+                            android:layout_height="45dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginRight="15dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/selector_login_button"
+                            android:text="添加材料"
+                            android:textColor="@drawable/btn_text_color_login" />
+                    </RelativeLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_send"
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@drawable/selector_login_button"
+                        android:text="确认提交出库单"
+                        android:textColor="@drawable/btn_text_color_login"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/cailiaotianjiabt"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/selector_dl_corners_saomia_soulu_button"
+                android:paddingLeft="80dp"
+                android:paddingRight="80dp"
+                android:text="前往材料添加"
+                android:textColor="@drawable/btn_text_color"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+    </com.gjyf.trolleybus.trolleybuss.myview.ListScrollView>
+
+</LinearLayout>

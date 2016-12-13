@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/toastlayout">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <GridView
+                android:id="@+id/grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:numColumns="auto_fit"
+                android:stretchMode="spacingWidthUniform" />
+
+            <ImageButton
+                android:id="@+id/btn_photo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/selector_dl_corners_saomia_soulu_button"
+                android:scaleType="centerInside"
+                android:src="@drawable/photo_camera" />
+
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>

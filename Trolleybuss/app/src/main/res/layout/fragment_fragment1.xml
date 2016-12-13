@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_gray"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="5dp"
+        android:layout_weight="3"
+        android:background="@drawable/toastlayout">
+
+        <com.baidu.mapapi.map.TextureMapView
+            android:id="@+id/bmapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/toastlayout_fram1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingRight="5dp">
+
+            <Button
+                android:id="@+id/task_history"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/selector_login_button"
+                android:text="任务历史"
+                android:textColor="@drawable/btn_text_color_login"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/task_num"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:background="@drawable/toastlayout"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="待处理任务"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/home"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@mipmap/location_resset"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/toastlayouttouming"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:visibility="invisible" />
+
+            <TextView
+                android:id="@+id/distance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="选择任务"
+                android:textColor="#FFF" />
+
+            <TextView
+                android:id="@+id/zhicanshuliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="#FFF" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="2"
+            android:background="@drawable/toastlayout"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/empty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="15dp"
+                android:background="@drawable/toastlayout"
+                android:gravity="center"
+                android:text="暂无任务 点击刷新 " />
+
+            <com.gjyf.trolleybus.trolleybuss.myview.XListView
+                android:id="@+id/xlistview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/toastlayout"
+                android:divider="@color/line_gray"
+                android:dividerHeight="1.0px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

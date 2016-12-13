@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<shape  
+  xmlns:android="http://schemas.android.com/apk/res/android">  
+    <corners android:radius="10.0px" />
+    <solid android:color="@color/title_background_bule" />
+        <!-- 边框的颜色 ：不能和窗口背景色一样-->
+    <stroke
+        android:width="0.5dp"
+        android:color="@color/title_background_bule" />
+</shape> 
+

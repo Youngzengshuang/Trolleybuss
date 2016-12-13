@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:background="@drawable/ld_di"
+    android:padding="3dp">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_my_dialog"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_my_dialog_et_titile"
+            android:layout_width="fill_parent"
+            android:layout_height="40.0dip"
+            android:gravity="center"
+            android:text="提示"
+            android:textColor="@color/mainthem"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/line_gray"
+            android:visibility="gone" />
+
+        <com.gjyf.trolleybus.trolleybuss.myview.ClearEditText
+            android:id="@+id/tv_my_dialog_et_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:cursorVisible="true"
+            android:digits="0123456789."
+            android:gravity="center"
+            android:hint="在此输入信息"
+            android:inputType="text"
+            android:lineSpacingMultiplier="1.5"
+            android:paddingBottom="16.0dip"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:paddingTop="16.0dip"
+            android:textColor="@color/mainthem"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"
+            android:background="@color/line_gray" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_mydialog_et_positive"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/select_btn_dialog_qr_cancel"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@drawable/btn_text_color"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="1.0px"
+                android:layout_height="fill_parent"
+                android:background="@color/line_gray" />
+
+            <Button
+                android:id="@+id/btn_mydialog_et_negative"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:background="@drawable/select_btn_dialog_qr_cancel"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@drawable/btn_text_color"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

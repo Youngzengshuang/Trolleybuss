@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gjyf.trolleybus.trolleybuss">
+
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCES_MOCK_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <!-- SDK1.5需要android.permission.GET_TASKS权限判断本程序是否为当前运行的应用? -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 来电消音 -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 摄影机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 蓝牙相关权限 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="com.gjyf.app.citylight.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="fTd6UAMa58Nc9PGPYpGbOeG3D0z87PQ4" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+
+        <meta-data
+            android:name="IFLYTEK_CHANNEL"
+            android:value="电车"/>
+        <meta-data
+            android:name="IFLYTEK_APPKEY"
+            android:value="'584e157e'"/>
+
+        <activity
+            android:name="com.iflytek.autoupdate.IFlytekUpdateDialog"
+            android:configChanges="keyboard|keyboardHidden|orientation"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <!-- 下载基础服务 -->
+        <service
+            android:name="com.iflytek.autoupdate.IFlytekDownloadService"
+            android:enabled="true"
+            android:process=":IFlytekDownloadService" />
+
+        <activity
+            android:name=".myview.LargePictureActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".LoginActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".OfflineBaiduMap"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".BaiduMapActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".RepairActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".MaterialActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".SelectCitiesDialogActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Dialog"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".CailiaoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity
+            android:name=".OutGoingCailiaoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|keyboard|"
+            android:launchMode="standard"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".QiangXActivity" />
+        <activity android:name=".StorageActivity" />
+        <activity android:name=".OutGoingActivity" />
+        <activity
+            android:name=".BNDemoMainActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden" />
+        <activity
+            android:name=".BNDemoGuideActivity"
+            android:configChanges="orientation|screenSize|keyboard|keyboardHidden"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SettingActivity" />
+        <activity android:name=".JiaoJieActivity" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:launchMode="standard"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ApprovalActivity" />
+        <activity android:name=".ApprovalInfoShowActivity" />
+        <activity android:name=".TaskHistoryActivity" />
+        <activity android:name=".HistoryTaskInfoActivity"></activity>
+    </application>
+
+</manifest>
